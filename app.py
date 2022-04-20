@@ -6,8 +6,8 @@ import uuid
 import collections
 
 # Constants
-CLIENT_ID = "ce42fe948f4e49a380028f15c79b5cda"
-CLIENT_SECRET = "c602ae563d904059a9addd7ef07e9372"
+CLIENT_ID = "CLIENT_ID"
+CLIENT_SECRET = "CLIENT_SECRET"
 MAX_QUERY_SIZE = 50
 CACHES_FOLDER = './.spotify_caches/'
 
