@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html id="page" lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+        font-family: "Akshar", sans-serif;
+        }
+        .content {
+            max-width: max-content;
+            margin: auto;
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>HEAVY BREAKDOWNS FINDER</h1>
+        <form style="text-align: center; " action="/result" method="get">
+            <label for="depth">HOW HARD TO HIT</label>
+            <br>
+            <input type="number" name="depth" min="10" max="3000" placeholder="DEPTH" value="{{ request.form['depth'] }}" size="50" width="48" height="48" required></input>
+            <br>
+            <br>
+            <br>
+            <label for="content">PLAYLIST LENGTH</label>
+            <br>
+            <input type="number" name="length" min="1" max="300" placeholder="LENGTH" value="{{ request.form['length'] }}"></input>
+            <br>
+            <br>
+            <br>
+            <button type="submit">BREAK</button>
+        </form>
+    </div>
+</body>
+</html>
