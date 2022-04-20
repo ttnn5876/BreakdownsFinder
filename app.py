@@ -37,7 +37,7 @@ def index():
     # Authenticate to spotify
     cache_handler = spotipy.cache_handler.CacheFileHandler(cache_path=session_cache_path())
     auth_manager = spotipy.oauth2.SpotifyOAuth(scope='playlist-modify-public',
-                                                cache_handler=cache_handler,
+                                                cache_handler=cache_handler, 
                                                 show_dialog=True,
                                                 open_browser=True)
 
@@ -47,7 +47,7 @@ def index():
 
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         auth_url = auth_manager.get_authorize_url()
-        return redirect(auth_url)
+        return f'<h2><a href="{auth_url}">Sign in</a></h2>'
 
     return render_template('index.html')
 
@@ -88,7 +88,7 @@ def result():
     playlist = spotify.user_playlist_create(current_user, "HEAVY BREAKS")
 
     # Add popular songs to playlist
-    songs_left = length
+    songs_left = length + 1
     for song, _ in collections.Counter(songs).most_common():
         try:
             if songs_left:
