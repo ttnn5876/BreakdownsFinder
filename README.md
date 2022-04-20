@@ -6,7 +6,7 @@ If someone ever sees this and has tips for improvement, please, send me an email
 
 ## How it works
 The apps crawls Spotify using it's web API to find public playlists of songs with breakdowns, and than creates a new playlist for the user with the most common songs found.
- * The Depth parameter determines how many playlists will be indexed.
+ * The Depth parameter determines how many playlists will be indexed. (More depth = higher runtime)
  * The Length parameter determines how many songs will be in the final playlist.
 
 ## How to run this
